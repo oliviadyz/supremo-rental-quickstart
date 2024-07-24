@@ -13,7 +13,7 @@ import './css/style.css';
 
 import '@popperjs/core';
 
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
 import 'owl.carousel/dist/assets/owl.carousel.css'; // Import Owl Carousel CSS
 // import 'owl.carousel';
 import 'magnific-popup';
@@ -50,7 +50,7 @@ function App(backendData, setShowPopular, setShowFilter, setFilterOptions) {
   const history = useNavigate();
   const location = useLocation();
   const getUserId = localStorage.getItem('userid');
-  // console.log("getUserId ", getUserId);
+  console.log("getUserId ", getUserId);
 
 
   const [userData, setUserData] = useState([]);
@@ -96,16 +96,16 @@ function App(backendData, setShowPopular, setShowFilter, setFilterOptions) {
   };
 
   // 
-  //console.log("dot env variable ", process.env.REACT_APP_BACKEND_SERVICE_IP);
+
   // const [backendBookingData, setBackendBookingData] = useState([]);
   // const [filteredDataCars, setFilteredDataCars] = useState([]);
 
   useEffect(() => {
     // Fetch booking data
-    fetch(`${process.env.REACT_APP_BACKEND_SERVICE_IP}/order-service/user-orders?userid=${getUserId}`)
+    fetch(`http://140.238.167.80:5000/order-service/user-orders?userid=${getUserId}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log("Data from server:>> ", data);
+        console.log("Data from server:>> ", data);
         setBackendBookingData(data);
       })
       .catch((err) => {
@@ -115,17 +115,11 @@ function App(backendData, setShowPopular, setShowFilter, setFilterOptions) {
     // Fetch car data
     const fetchUserData = async () => {
       try {
-        const userResponse = await fetch(`${process.env.REACT_APP_BACKEND_SERVICE_IP}/user-service-redis/users/${getUserId}`);
-        if (!userResponse.ok) {
-          throw new Error('Failed to fetch user data');
-        }
-        const userData = await userResponse.json();
+        const response = await fetch(`http://140.238.167.80:5000/user-service-redis/users/${getUserId}`);
+        const userData = await response.json();
         setUserData(userData);
-    
-        const carListResponse = await fetch(`${process.env.REACT_APP_BACKEND_SERVICE_IP}/car-service-redis/cars`);
-        if (!carListResponse.ok) {
-          throw new Error('Failed to fetch car data');
-        }
+
+        const carListResponse = await fetch(process.env.REACT_APP_CARLIST_URL);
         const carListData = await carListResponse.json();
         setBackendDataCars(carListData);
         setFilteredDataCars(carListData);
@@ -133,7 +127,6 @@ function App(backendData, setShowPopular, setShowFilter, setFilterOptions) {
         console.error('Error fetching data:', error.message);
       }
     };
-    
 
     if (getUserId) {
       fetchUserData();
