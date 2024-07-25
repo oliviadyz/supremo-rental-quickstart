@@ -1,4 +1,4 @@
-##0 Supremo Rental Quickstart  
+## 2 Supremo Rental Quickstart  
 
 ### 1. Setup baseline infrastructure
 
