@@ -319,9 +319,10 @@
   height: 70vh;
 }
 .services-wrap1 {
-  padding: 4em 1em 2em 1em;
+  padding: 1em 1em 2em 1em;
   background: #fff;
   box-shadow: 0px 5px 12px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #ccccccc4;
 }
 .servicesBookings-wrap1 {
   padding: 2em 1em 2em 1em;
@@ -339,17 +340,17 @@
 }
 .noOfOrder {
   background-color: #ae0000;
-  width: fit-content;
-  height: 25px;
+  width: auto;
+  height: auto;
   display: inline-block;
-  padding: 3px;
+  padding: 3px 7px;
   text-align: center;
-  /* border-radius: 50%; */
+  border-radius: 50%;
   color: #FFF;
   font-size: .8rem;
   line-height: 20px;
   position: relative;
-  min-width: 30px;
+  margin-right: 3px;
 }
 .askMeTxt {
   font-size: 1.3rem;
@@ -553,7 +554,7 @@ tr.expanded {
   top: 6px;
 }
 .request-form {
-  padding: 30px 30px 15px 30px !important;
+  padding: 30px 30px 0 30px !important;
 }
 .labelWhiteText {
   display: block;
@@ -681,45 +682,17 @@ tr.expanded {
 .carHealthBody img {
   width: 100%;
 }
-
-.paginationBtn {
-  padding: 3px 10px !important;
-  border-radius: 0 !important;
+.rowHeadingHt{
+  min-height: fit-content !important;
+}
+.modal-content{
+  height: 90vh;
+  width: 90vw;
+  max-width: 90vw;
 }
 
-.paginationBtnNumb {
-  padding: 3px 10px !important;
-  border-radius: 0 !important;
-  margin-right: 3px;
-}
-
-.btnPrev{
-  margin-right: 3px;
-}
-
-.currentPage {
-  background-color: #1089ff !important;
-  border: 1px solid #1089ff !important;
-  padding: 5px 10px !important;
-  border-radius: 50% !important;
-  width: 30px;
-  height: 30px;
-}
-
-.searchOrderDetails {
-  margin-top: -75px;
-  display: block;
-  position: relative;
-  float: right;
-  right: 50px;
-  padding: 5px;
-  border-radius: 3px;
-  border: 0px;
-}
-
-.cardetailsForm {
-  height: 90px;
-}
-input:focus {
-  outline: none;
+.chatWithMeWin.modal.show .modal-dialog {
+  max-width: 85%;
+  max-height: 90vh;
+  height: 90vh;
 }
