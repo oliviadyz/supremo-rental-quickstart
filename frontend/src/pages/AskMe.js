@@ -102,7 +102,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
                         "neural": {
                             "passage_embedding": {
                             "query_text": searchValue,
-                            "model_id": "FgcfOZABWkvcnbXYzeCC",
+                            "model_id": "GzxDCJEBIHsWKaS2THTE",
                             "k": 5
                             }
                         }
