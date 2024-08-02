@@ -51,7 +51,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
 
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", "Basic b3BlbnNlYXJjaDpPcmFjbGUjMTIz");
+        myHeaders.append("Authorization", "Basic b3NtYXN0ZXI6T3NtYXN0ZXJAMTIz");
 
         const raw = JSON.stringify({
             "query": {
