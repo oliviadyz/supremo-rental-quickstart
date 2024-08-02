@@ -68,7 +68,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
             redirect: 'follow'
         };
 
-        fetch(`http://150.230.168.50:5000/askme-search`, requestOptions)
+        fetch(`http://158.101.110.176:5000/askme-search`, requestOptions)
             .then(response => response.json())
             .then(result => {
                 console.log(result);
@@ -128,7 +128,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
             redirect: 'follow'
         };
 
-        fetch(`http://150.230.168.50:5000/askme-semanticsearch`, requestOptions)
+        fetch(`http://158.101.110.176:5000/askme-semanticsearch`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
