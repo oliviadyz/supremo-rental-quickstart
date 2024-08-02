@@ -51,7 +51,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
 
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", "Basic b3BlbnNlYXJjaDpPcmFjbGUjMTIz");
+        myHeaders.append("Authorization", "Basic b3NtYXN0ZXI6T3NtYXN0ZXJAMTIz");
 
         const raw = JSON.stringify({
             "query": {
@@ -90,7 +90,7 @@ function AskMe({ onLogout, userJsonVal, bookingCount }) {
 
         const myHeadersSemantic = new Headers();
         myHeadersSemantic.append("Content-Type", "application/json");
-        myHeadersSemantic.append("Authorization", "Basic b3BlbnNlYXJjaDpPcmFjbGUjMTIz");
+        myHeadersSemantic.append("Authorization", "Basic b3NtYXN0ZXI6T3NtYXN0ZXJAMTIz");
 
         const rawSemantic = JSON.stringify({
             "query": {
